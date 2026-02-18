@@ -1,2 +1,2 @@
-#!/bin/zsh
-dart run ffigen
+#!/bin/bash
+flutter pub run ffigen

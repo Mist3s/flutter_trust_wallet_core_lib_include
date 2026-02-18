@@ -1,9 +1,14 @@
-///
-//  Generated code. Do not modify.
-//  source: Tezos.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from Tezos.proto.
+
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:core' as $core;
 
@@ -12,185 +17,190 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'Tezos.pbenum.dart';
 
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+
 export 'Tezos.pbenum.dart';
 
+/// Input data necessary to create a signed Tezos transaction.
+/// Next field: 3
 class SigningInput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOM<OperationList>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operationList', subBuilder: OperationList.create)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'encodedOperations', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  SigningInput._() : super();
   factory SigningInput({
     OperationList? operationList,
     $core.List<$core.int>? encodedOperations,
     $core.List<$core.int>? privateKey,
   }) {
-    final _result = create();
-    if (operationList != null) {
-      _result.operationList = operationList;
-    }
-    if (encodedOperations != null) {
-      _result.encodedOperations = encodedOperations;
-    }
-    if (privateKey != null) {
-      _result.privateKey = privateKey;
-    }
-    return _result;
+    final result = create();
+    if (operationList != null) result.operationList = operationList;
+    if (encodedOperations != null) result.encodedOperations = encodedOperations;
+    if (privateKey != null) result.privateKey = privateKey;
+    return result;
   }
-  factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  SigningInput._();
+
+  factory SigningInput.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SigningInput.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningInput', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOM<OperationList>(1, _omitFieldNames ? '' : 'operationList', subBuilder: OperationList.create)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'encodedOperations', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
+  @$core.override
   SigningInput createEmptyInstance() => create();
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
   static SigningInput? _defaultInstance;
 
+  /// One or more operations
   @$pb.TagNumber(1)
   OperationList get operationList => $_getN(0);
   @$pb.TagNumber(1)
-  set operationList(OperationList v) { setField(1, v); }
+  set operationList(OperationList value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOperationList() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOperationList() => clearField(1);
+  void clearOperationList() => $_clearField(1);
   @$pb.TagNumber(1)
   OperationList ensureOperationList() => $_ensure(0);
 
+  /// Encoded operation bytes obtained with $RPC_URL/chains/main/blocks/head/helpers/forge/operations, operation_list will be ignored.
   @$pb.TagNumber(2)
   $core.List<$core.int> get encodedOperations => $_getN(1);
   @$pb.TagNumber(2)
-  set encodedOperations($core.List<$core.int> v) { $_setBytes(1, v); }
+  set encodedOperations($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasEncodedOperations() => $_has(1);
   @$pb.TagNumber(2)
-  void clearEncodedOperations() => clearField(2);
+  void clearEncodedOperations() => $_clearField(2);
 
+  /// The secret private key used for signing (32 bytes).
   @$pb.TagNumber(3)
   $core.List<$core.int> get privateKey => $_getN(2);
   @$pb.TagNumber(3)
-  set privateKey($core.List<$core.int> v) { $_setBytes(2, v); }
+  set privateKey($core.List<$core.int> value) => $_setBytes(2, value);
   @$pb.TagNumber(3)
   $core.bool hasPrivateKey() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPrivateKey() => clearField(3);
+  void clearPrivateKey() => $_clearField(3);
 }
 
+/// Result containing the signed and encoded transaction.
+/// Next field: 2
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'encoded', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  SigningOutput._() : super();
   factory SigningOutput({
     $core.List<$core.int>? encoded,
   }) {
-    final _result = create();
-    if (encoded != null) {
-      _result.encoded = encoded;
-    }
-    return _result;
+    final result = create();
+    if (encoded != null) result.encoded = encoded;
+    return result;
   }
-  factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  SigningOutput._();
+
+  factory SigningOutput.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SigningOutput.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningOutput', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'encoded', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
+  @$core.override
   SigningOutput createEmptyInstance() => create();
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
   static SigningOutput? _defaultInstance;
 
+  /// The encoded transaction
   @$pb.TagNumber(1)
   $core.List<$core.int> get encoded => $_getN(0);
   @$pb.TagNumber(1)
-  set encoded($core.List<$core.int> v) { $_setBytes(0, v); }
+  set encoded($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEncoded() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEncoded() => clearField(1);
+  void clearEncoded() => $_clearField(1);
 }
 
+/// A list of operations and a branch.
+/// Next field: 3
 class OperationList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OperationList', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'branch')
-    ..pc<Operation>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'operations', $pb.PbFieldType.PM, subBuilder: Operation.create)
-    ..hasRequiredFields = false
-  ;
-
-  OperationList._() : super();
   factory OperationList({
     $core.String? branch,
     $core.Iterable<Operation>? operations,
   }) {
-    final _result = create();
-    if (branch != null) {
-      _result.branch = branch;
-    }
-    if (operations != null) {
-      _result.operations.addAll(operations);
-    }
-    return _result;
+    final result = create();
+    if (branch != null) result.branch = branch;
+    if (operations != null) result.operations.addAll(operations);
+    return result;
   }
-  factory OperationList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OperationList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  OperationList._();
+
+  factory OperationList.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory OperationList.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OperationList', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'branch')
+    ..pc<Operation>(2, _omitFieldNames ? '' : 'operations', $pb.PbFieldType.PM, subBuilder: Operation.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationList clone() => OperationList()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  OperationList copyWith(void Function(OperationList) updates) => super.copyWith((message) => updates(message as OperationList)) as OperationList; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationList copyWith(void Function(OperationList) updates) => super.copyWith((message) => updates(message as OperationList)) as OperationList;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationList create() => OperationList._();
+  @$core.override
   OperationList createEmptyInstance() => create();
   static $pb.PbList<OperationList> createRepeated() => $pb.PbList<OperationList>();
   @$core.pragma('dart2js:noInline')
   static OperationList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OperationList>(create);
   static OperationList? _defaultInstance;
 
+  /// branch
   @$pb.TagNumber(1)
   $core.String get branch => $_getSZ(0);
   @$pb.TagNumber(1)
-  set branch($core.String v) { $_setString(0, v); }
+  set branch($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasBranch() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBranch() => clearField(1);
+  void clearBranch() => $_clearField(1);
 
+  /// list of operations
   @$pb.TagNumber(2)
-  $core.List<Operation> get operations => $_getList(1);
+  $pb.PbList<Operation> get operations => $_getList(1);
 }
 
 enum Operation_OperationData {
@@ -200,28 +210,9 @@ enum Operation_OperationData {
   notSet
 }
 
+/// An operation that can be applied to the Tezos blockchain.
+/// Next field: 12
 class Operation extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Operation_OperationData> _Operation_OperationDataByTag = {
-    8 : Operation_OperationData.revealOperationData,
-    9 : Operation_OperationData.transactionOperationData,
-    11 : Operation_OperationData.delegationOperationData,
-    0 : Operation_OperationData.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Operation', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..oo(0, [8, 9, 11])
-    ..aInt64(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'counter')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source')
-    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee')
-    ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gasLimit')
-    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'storageLimit')
-    ..e<Operation_OperationKind>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'kind', $pb.PbFieldType.OE, defaultOrMaker: Operation_OperationKind.ENDORSEMENT, valueOf: Operation_OperationKind.valueOf, enumValues: Operation_OperationKind.values)
-    ..aOM<RevealOperationData>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'revealOperationData', subBuilder: RevealOperationData.create)
-    ..aOM<TransactionOperationData>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transactionOperationData', subBuilder: TransactionOperationData.create)
-    ..aOM<DelegationOperationData>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'delegationOperationData', subBuilder: DelegationOperationData.create)
-    ..hasRequiredFields = false
-  ;
-
-  Operation._() : super();
   factory Operation({
     $fixnum.Int64? counter,
     $core.String? source,
@@ -233,51 +224,55 @@ class Operation extends $pb.GeneratedMessage {
     TransactionOperationData? transactionOperationData,
     DelegationOperationData? delegationOperationData,
   }) {
-    final _result = create();
-    if (counter != null) {
-      _result.counter = counter;
-    }
-    if (source != null) {
-      _result.source = source;
-    }
-    if (fee != null) {
-      _result.fee = fee;
-    }
-    if (gasLimit != null) {
-      _result.gasLimit = gasLimit;
-    }
-    if (storageLimit != null) {
-      _result.storageLimit = storageLimit;
-    }
-    if (kind != null) {
-      _result.kind = kind;
-    }
-    if (revealOperationData != null) {
-      _result.revealOperationData = revealOperationData;
-    }
-    if (transactionOperationData != null) {
-      _result.transactionOperationData = transactionOperationData;
-    }
-    if (delegationOperationData != null) {
-      _result.delegationOperationData = delegationOperationData;
-    }
-    return _result;
+    final result = create();
+    if (counter != null) result.counter = counter;
+    if (source != null) result.source = source;
+    if (fee != null) result.fee = fee;
+    if (gasLimit != null) result.gasLimit = gasLimit;
+    if (storageLimit != null) result.storageLimit = storageLimit;
+    if (kind != null) result.kind = kind;
+    if (revealOperationData != null) result.revealOperationData = revealOperationData;
+    if (transactionOperationData != null) result.transactionOperationData = transactionOperationData;
+    if (delegationOperationData != null) result.delegationOperationData = delegationOperationData;
+    return result;
   }
-  factory Operation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Operation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  Operation._();
+
+  factory Operation.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory Operation.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, Operation_OperationData> _Operation_OperationDataByTag = {
+    8 : Operation_OperationData.revealOperationData,
+    9 : Operation_OperationData.transactionOperationData,
+    11 : Operation_OperationData.delegationOperationData,
+    0 : Operation_OperationData.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Operation', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..oo(0, [8, 9, 11])
+    ..aInt64(1, _omitFieldNames ? '' : 'counter')
+    ..aOS(2, _omitFieldNames ? '' : 'source')
+    ..aInt64(3, _omitFieldNames ? '' : 'fee')
+    ..aInt64(4, _omitFieldNames ? '' : 'gasLimit')
+    ..aInt64(5, _omitFieldNames ? '' : 'storageLimit')
+    ..e<Operation_OperationKind>(7, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE, defaultOrMaker: Operation_OperationKind.ENDORSEMENT, valueOf: Operation_OperationKind.valueOf, enumValues: Operation_OperationKind.values)
+    ..aOM<RevealOperationData>(8, _omitFieldNames ? '' : 'revealOperationData', subBuilder: RevealOperationData.create)
+    ..aOM<TransactionOperationData>(9, _omitFieldNames ? '' : 'transactionOperationData', subBuilder: TransactionOperationData.create)
+    ..aOM<DelegationOperationData>(11, _omitFieldNames ? '' : 'delegationOperationData', subBuilder: DelegationOperationData.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Operation clone() => Operation()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Operation copyWith(void Function(Operation) updates) => super.copyWith((message) => updates(message as Operation)) as Operation; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Operation copyWith(void Function(Operation) updates) => super.copyWith((message) => updates(message as Operation)) as Operation;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Operation create() => Operation._();
+  @$core.override
   Operation createEmptyInstance() => create();
   static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
   @$core.pragma('dart2js:noInline')
@@ -285,142 +280,141 @@ class Operation extends $pb.GeneratedMessage {
   static Operation? _defaultInstance;
 
   Operation_OperationData whichOperationData() => _Operation_OperationDataByTag[$_whichOneof(0)]!;
-  void clearOperationData() => clearField($_whichOneof(0));
+  void clearOperationData() => $_clearField($_whichOneof(0));
 
+  /// counter
   @$pb.TagNumber(1)
   $fixnum.Int64 get counter => $_getI64(0);
   @$pb.TagNumber(1)
-  set counter($fixnum.Int64 v) { $_setInt64(0, v); }
+  set counter($fixnum.Int64 value) => $_setInt64(0, value);
   @$pb.TagNumber(1)
   $core.bool hasCounter() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCounter() => clearField(1);
+  void clearCounter() => $_clearField(1);
 
+  /// source account
   @$pb.TagNumber(2)
   $core.String get source => $_getSZ(1);
   @$pb.TagNumber(2)
-  set source($core.String v) { $_setString(1, v); }
+  set source($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSource() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSource() => clearField(2);
+  void clearSource() => $_clearField(2);
 
+  /// fee
   @$pb.TagNumber(3)
   $fixnum.Int64 get fee => $_getI64(2);
   @$pb.TagNumber(3)
-  set fee($fixnum.Int64 v) { $_setInt64(2, v); }
+  set fee($fixnum.Int64 value) => $_setInt64(2, value);
   @$pb.TagNumber(3)
   $core.bool hasFee() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFee() => clearField(3);
+  void clearFee() => $_clearField(3);
 
+  /// gas limit
   @$pb.TagNumber(4)
   $fixnum.Int64 get gasLimit => $_getI64(3);
   @$pb.TagNumber(4)
-  set gasLimit($fixnum.Int64 v) { $_setInt64(3, v); }
+  set gasLimit($fixnum.Int64 value) => $_setInt64(3, value);
   @$pb.TagNumber(4)
   $core.bool hasGasLimit() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGasLimit() => clearField(4);
+  void clearGasLimit() => $_clearField(4);
 
+  /// storage limit
   @$pb.TagNumber(5)
   $fixnum.Int64 get storageLimit => $_getI64(4);
   @$pb.TagNumber(5)
-  set storageLimit($fixnum.Int64 v) { $_setInt64(4, v); }
+  set storageLimit($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasStorageLimit() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStorageLimit() => clearField(5);
+  void clearStorageLimit() => $_clearField(5);
 
+  /// Operation type
   @$pb.TagNumber(7)
   Operation_OperationKind get kind => $_getN(5);
   @$pb.TagNumber(7)
-  set kind(Operation_OperationKind v) { setField(7, v); }
+  set kind(Operation_OperationKind value) => $_setField(7, value);
   @$pb.TagNumber(7)
   $core.bool hasKind() => $_has(5);
   @$pb.TagNumber(7)
-  void clearKind() => clearField(7);
+  void clearKind() => $_clearField(7);
 
   @$pb.TagNumber(8)
   RevealOperationData get revealOperationData => $_getN(6);
   @$pb.TagNumber(8)
-  set revealOperationData(RevealOperationData v) { setField(8, v); }
+  set revealOperationData(RevealOperationData value) => $_setField(8, value);
   @$pb.TagNumber(8)
   $core.bool hasRevealOperationData() => $_has(6);
   @$pb.TagNumber(8)
-  void clearRevealOperationData() => clearField(8);
+  void clearRevealOperationData() => $_clearField(8);
   @$pb.TagNumber(8)
   RevealOperationData ensureRevealOperationData() => $_ensure(6);
 
   @$pb.TagNumber(9)
   TransactionOperationData get transactionOperationData => $_getN(7);
   @$pb.TagNumber(9)
-  set transactionOperationData(TransactionOperationData v) { setField(9, v); }
+  set transactionOperationData(TransactionOperationData value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasTransactionOperationData() => $_has(7);
   @$pb.TagNumber(9)
-  void clearTransactionOperationData() => clearField(9);
+  void clearTransactionOperationData() => $_clearField(9);
   @$pb.TagNumber(9)
   TransactionOperationData ensureTransactionOperationData() => $_ensure(7);
 
   @$pb.TagNumber(11)
   DelegationOperationData get delegationOperationData => $_getN(8);
   @$pb.TagNumber(11)
-  set delegationOperationData(DelegationOperationData v) { setField(11, v); }
+  set delegationOperationData(DelegationOperationData value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasDelegationOperationData() => $_has(8);
   @$pb.TagNumber(11)
-  void clearDelegationOperationData() => clearField(11);
+  void clearDelegationOperationData() => $_clearField(11);
   @$pb.TagNumber(11)
   DelegationOperationData ensureDelegationOperationData() => $_ensure(8);
 }
 
 class FA12Parameters extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FA12Parameters', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'entrypoint')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'from')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
-    ..hasRequiredFields = false
-  ;
-
-  FA12Parameters._() : super();
   factory FA12Parameters({
     $core.String? entrypoint,
     $core.String? from,
     $core.String? to,
     $core.String? value,
   }) {
-    final _result = create();
-    if (entrypoint != null) {
-      _result.entrypoint = entrypoint;
-    }
-    if (from != null) {
-      _result.from = from;
-    }
-    if (to != null) {
-      _result.to = to;
-    }
-    if (value != null) {
-      _result.value = value;
-    }
-    return _result;
+    final result = create();
+    if (entrypoint != null) result.entrypoint = entrypoint;
+    if (from != null) result.from = from;
+    if (to != null) result.to = to;
+    if (value != null) result.value = value;
+    return result;
   }
-  factory FA12Parameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FA12Parameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  FA12Parameters._();
+
+  factory FA12Parameters.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FA12Parameters.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FA12Parameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'entrypoint')
+    ..aOS(2, _omitFieldNames ? '' : 'from')
+    ..aOS(3, _omitFieldNames ? '' : 'to')
+    ..aOS(4, _omitFieldNames ? '' : 'value')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FA12Parameters clone() => FA12Parameters()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  FA12Parameters copyWith(void Function(FA12Parameters) updates) => super.copyWith((message) => updates(message as FA12Parameters)) as FA12Parameters; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FA12Parameters copyWith(void Function(FA12Parameters) updates) => super.copyWith((message) => updates(message as FA12Parameters)) as FA12Parameters;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FA12Parameters create() => FA12Parameters._();
+  @$core.override
   FA12Parameters createEmptyInstance() => create();
   static $pb.PbList<FA12Parameters> createRepeated() => $pb.PbList<FA12Parameters>();
   @$core.pragma('dart2js:noInline')
@@ -430,81 +424,76 @@ class FA12Parameters extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get entrypoint => $_getSZ(0);
   @$pb.TagNumber(1)
-  set entrypoint($core.String v) { $_setString(0, v); }
+  set entrypoint($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEntrypoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEntrypoint() => clearField(1);
+  void clearEntrypoint() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get from => $_getSZ(1);
   @$pb.TagNumber(2)
-  set from($core.String v) { $_setString(1, v); }
+  set from($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasFrom() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFrom() => clearField(2);
+  void clearFrom() => $_clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get to => $_getSZ(2);
   @$pb.TagNumber(3)
-  set to($core.String v) { $_setString(2, v); }
+  set to($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasTo() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTo() => clearField(3);
+  void clearTo() => $_clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get value => $_getSZ(3);
   @$pb.TagNumber(4)
-  set value($core.String v) { $_setString(3, v); }
+  set value($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasValue() => $_has(3);
   @$pb.TagNumber(4)
-  void clearValue() => clearField(4);
+  void clearValue() => $_clearField(4);
 }
 
 class Txs extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Txs', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenId')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
-    ..hasRequiredFields = false
-  ;
-
-  Txs._() : super();
   factory Txs({
     $core.String? to,
     $core.String? tokenId,
     $core.String? amount,
   }) {
-    final _result = create();
-    if (to != null) {
-      _result.to = to;
-    }
-    if (tokenId != null) {
-      _result.tokenId = tokenId;
-    }
-    if (amount != null) {
-      _result.amount = amount;
-    }
-    return _result;
+    final result = create();
+    if (to != null) result.to = to;
+    if (tokenId != null) result.tokenId = tokenId;
+    if (amount != null) result.amount = amount;
+    return result;
   }
-  factory Txs.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Txs.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  Txs._();
+
+  factory Txs.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory Txs.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Txs', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'to')
+    ..aOS(2, _omitFieldNames ? '' : 'tokenId')
+    ..aOS(3, _omitFieldNames ? '' : 'amount')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Txs clone() => Txs()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Txs copyWith(void Function(Txs) updates) => super.copyWith((message) => updates(message as Txs)) as Txs; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Txs copyWith(void Function(Txs) updates) => super.copyWith((message) => updates(message as Txs)) as Txs;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Txs create() => Txs._();
+  @$core.override
   Txs createEmptyInstance() => create();
   static $pb.PbList<Txs> createRepeated() => $pb.PbList<Txs>();
   @$core.pragma('dart2js:noInline')
@@ -514,67 +503,64 @@ class Txs extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get to => $_getSZ(0);
   @$pb.TagNumber(1)
-  set to($core.String v) { $_setString(0, v); }
+  set to($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTo() => clearField(1);
+  void clearTo() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get tokenId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set tokenId($core.String v) { $_setString(1, v); }
+  set tokenId($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasTokenId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTokenId() => clearField(2);
+  void clearTokenId() => $_clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get amount => $_getSZ(2);
   @$pb.TagNumber(3)
-  set amount($core.String v) { $_setString(2, v); }
+  set amount($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAmount() => clearField(3);
+  void clearAmount() => $_clearField(3);
 }
 
 class TxObject extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TxObject', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'from')
-    ..pc<Txs>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: Txs.create)
-    ..hasRequiredFields = false
-  ;
-
-  TxObject._() : super();
   factory TxObject({
     $core.String? from,
     $core.Iterable<Txs>? txs,
   }) {
-    final _result = create();
-    if (from != null) {
-      _result.from = from;
-    }
-    if (txs != null) {
-      _result.txs.addAll(txs);
-    }
-    return _result;
+    final result = create();
+    if (from != null) result.from = from;
+    if (txs != null) result.txs.addAll(txs);
+    return result;
   }
-  factory TxObject.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TxObject.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  TxObject._();
+
+  factory TxObject.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TxObject.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TxObject', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'from')
+    ..pc<Txs>(2, _omitFieldNames ? '' : 'txs', $pb.PbFieldType.PM, subBuilder: Txs.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TxObject clone() => TxObject()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  TxObject copyWith(void Function(TxObject) updates) => super.copyWith((message) => updates(message as TxObject)) as TxObject; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TxObject copyWith(void Function(TxObject) updates) => super.copyWith((message) => updates(message as TxObject)) as TxObject;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TxObject create() => TxObject._();
+  @$core.override
   TxObject createEmptyInstance() => create();
   static $pb.PbList<TxObject> createRepeated() => $pb.PbList<TxObject>();
   @$core.pragma('dart2js:noInline')
@@ -584,52 +570,49 @@ class TxObject extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get from => $_getSZ(0);
   @$pb.TagNumber(1)
-  set from($core.String v) { $_setString(0, v); }
+  set from($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasFrom() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFrom() => clearField(1);
+  void clearFrom() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<Txs> get txs => $_getList(1);
+  $pb.PbList<Txs> get txs => $_getList(1);
 }
 
 class FA2Parameters extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'FA2Parameters', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'entrypoint')
-    ..pc<TxObject>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'txsObject', $pb.PbFieldType.PM, subBuilder: TxObject.create)
-    ..hasRequiredFields = false
-  ;
-
-  FA2Parameters._() : super();
   factory FA2Parameters({
     $core.String? entrypoint,
     $core.Iterable<TxObject>? txsObject,
   }) {
-    final _result = create();
-    if (entrypoint != null) {
-      _result.entrypoint = entrypoint;
-    }
-    if (txsObject != null) {
-      _result.txsObject.addAll(txsObject);
-    }
-    return _result;
+    final result = create();
+    if (entrypoint != null) result.entrypoint = entrypoint;
+    if (txsObject != null) result.txsObject.addAll(txsObject);
+    return result;
   }
-  factory FA2Parameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FA2Parameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  FA2Parameters._();
+
+  factory FA2Parameters.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FA2Parameters.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FA2Parameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'entrypoint')
+    ..pc<TxObject>(2, _omitFieldNames ? '' : 'txsObject', $pb.PbFieldType.PM, subBuilder: TxObject.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   FA2Parameters clone() => FA2Parameters()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  FA2Parameters copyWith(void Function(FA2Parameters) updates) => super.copyWith((message) => updates(message as FA2Parameters)) as FA2Parameters; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FA2Parameters copyWith(void Function(FA2Parameters) updates) => super.copyWith((message) => updates(message as FA2Parameters)) as FA2Parameters;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FA2Parameters create() => FA2Parameters._();
+  @$core.override
   FA2Parameters createEmptyInstance() => create();
   static $pb.PbList<FA2Parameters> createRepeated() => $pb.PbList<FA2Parameters>();
   @$core.pragma('dart2js:noInline')
@@ -639,14 +622,14 @@ class FA2Parameters extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get entrypoint => $_getSZ(0);
   @$pb.TagNumber(1)
-  set entrypoint($core.String v) { $_setString(0, v); }
+  set entrypoint($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasEntrypoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEntrypoint() => clearField(1);
+  void clearEntrypoint() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<TxObject> get txsObject => $_getList(1);
+  $pb.PbList<TxObject> get txsObject => $_getList(1);
 }
 
 enum OperationParameters_Parameters {
@@ -655,48 +638,46 @@ enum OperationParameters_Parameters {
   notSet
 }
 
+/// Generic operation parameters
 class OperationParameters extends $pb.GeneratedMessage {
+  factory OperationParameters({
+    FA12Parameters? fa12Parameters,
+    FA2Parameters? fa2Parameters,
+  }) {
+    final result = create();
+    if (fa12Parameters != null) result.fa12Parameters = fa12Parameters;
+    if (fa2Parameters != null) result.fa2Parameters = fa2Parameters;
+    return result;
+  }
+
+  OperationParameters._();
+
+  factory OperationParameters.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory OperationParameters.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
   static const $core.Map<$core.int, OperationParameters_Parameters> _OperationParameters_ParametersByTag = {
     1 : OperationParameters_Parameters.fa12Parameters,
     2 : OperationParameters_Parameters.fa2Parameters,
     0 : OperationParameters_Parameters.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OperationParameters', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OperationParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<FA12Parameters>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fa12Parameters', subBuilder: FA12Parameters.create)
-    ..aOM<FA2Parameters>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fa2Parameters', subBuilder: FA2Parameters.create)
+    ..aOM<FA12Parameters>(1, _omitFieldNames ? '' : 'fa12Parameters', subBuilder: FA12Parameters.create)
+    ..aOM<FA2Parameters>(2, _omitFieldNames ? '' : 'fa2Parameters', subBuilder: FA2Parameters.create)
     ..hasRequiredFields = false
   ;
 
-  OperationParameters._() : super();
-  factory OperationParameters({
-    FA12Parameters? fa12Parameters,
-    FA2Parameters? fa2Parameters,
-  }) {
-    final _result = create();
-    if (fa12Parameters != null) {
-      _result.fa12Parameters = fa12Parameters;
-    }
-    if (fa2Parameters != null) {
-      _result.fa2Parameters = fa2Parameters;
-    }
-    return _result;
-  }
-  factory OperationParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OperationParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OperationParameters clone() => OperationParameters()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  OperationParameters copyWith(void Function(OperationParameters) updates) => super.copyWith((message) => updates(message as OperationParameters)) as OperationParameters; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OperationParameters copyWith(void Function(OperationParameters) updates) => super.copyWith((message) => updates(message as OperationParameters)) as OperationParameters;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationParameters create() => OperationParameters._();
+  @$core.override
   OperationParameters createEmptyInstance() => create();
   static $pb.PbList<OperationParameters> createRepeated() => $pb.PbList<OperationParameters>();
   @$core.pragma('dart2js:noInline')
@@ -704,72 +685,69 @@ class OperationParameters extends $pb.GeneratedMessage {
   static OperationParameters? _defaultInstance;
 
   OperationParameters_Parameters whichParameters() => _OperationParameters_ParametersByTag[$_whichOneof(0)]!;
-  void clearParameters() => clearField($_whichOneof(0));
+  void clearParameters() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   FA12Parameters get fa12Parameters => $_getN(0);
   @$pb.TagNumber(1)
-  set fa12Parameters(FA12Parameters v) { setField(1, v); }
+  set fa12Parameters(FA12Parameters value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFa12Parameters() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFa12Parameters() => clearField(1);
+  void clearFa12Parameters() => $_clearField(1);
   @$pb.TagNumber(1)
   FA12Parameters ensureFa12Parameters() => $_ensure(0);
 
   @$pb.TagNumber(2)
   FA2Parameters get fa2Parameters => $_getN(1);
   @$pb.TagNumber(2)
-  set fa2Parameters(FA2Parameters v) { setField(2, v); }
+  set fa2Parameters(FA2Parameters value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasFa2Parameters() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFa2Parameters() => clearField(2);
+  void clearFa2Parameters() => $_clearField(2);
   @$pb.TagNumber(2)
   FA2Parameters ensureFa2Parameters() => $_ensure(1);
 }
 
+/// Transaction operation specific data.
+/// Next field: 3
 class TransactionOperationData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionOperationData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'destination')
-    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
-    ..aOM<OperationParameters>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'parameters', subBuilder: OperationParameters.create)
-    ..hasRequiredFields = false
-  ;
-
-  TransactionOperationData._() : super();
   factory TransactionOperationData({
     $core.String? destination,
     $fixnum.Int64? amount,
     OperationParameters? parameters,
   }) {
-    final _result = create();
-    if (destination != null) {
-      _result.destination = destination;
-    }
-    if (amount != null) {
-      _result.amount = amount;
-    }
-    if (parameters != null) {
-      _result.parameters = parameters;
-    }
-    return _result;
+    final result = create();
+    if (destination != null) result.destination = destination;
+    if (amount != null) result.amount = amount;
+    if (parameters != null) result.parameters = parameters;
+    return result;
   }
-  factory TransactionOperationData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TransactionOperationData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  TransactionOperationData._();
+
+  factory TransactionOperationData.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TransactionOperationData.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionOperationData', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'destination')
+    ..aInt64(2, _omitFieldNames ? '' : 'amount')
+    ..aOM<OperationParameters>(3, _omitFieldNames ? '' : 'parameters', subBuilder: OperationParameters.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TransactionOperationData clone() => TransactionOperationData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  TransactionOperationData copyWith(void Function(TransactionOperationData) updates) => super.copyWith((message) => updates(message as TransactionOperationData)) as TransactionOperationData; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TransactionOperationData copyWith(void Function(TransactionOperationData) updates) => super.copyWith((message) => updates(message as TransactionOperationData)) as TransactionOperationData;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransactionOperationData create() => TransactionOperationData._();
+  @$core.override
   TransactionOperationData createEmptyInstance() => create();
   static $pb.PbList<TransactionOperationData> createRepeated() => $pb.PbList<TransactionOperationData>();
   @$core.pragma('dart2js:noInline')
@@ -779,64 +757,65 @@ class TransactionOperationData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get destination => $_getSZ(0);
   @$pb.TagNumber(1)
-  set destination($core.String v) { $_setString(0, v); }
+  set destination($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDestination() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDestination() => clearField(1);
+  void clearDestination() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get amount => $_getI64(1);
   @$pb.TagNumber(2)
-  set amount($fixnum.Int64 v) { $_setInt64(1, v); }
+  set amount($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAmount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAmount() => clearField(2);
+  void clearAmount() => $_clearField(2);
 
   @$pb.TagNumber(3)
   OperationParameters get parameters => $_getN(2);
   @$pb.TagNumber(3)
-  set parameters(OperationParameters v) { setField(3, v); }
+  set parameters(OperationParameters value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasParameters() => $_has(2);
   @$pb.TagNumber(3)
-  void clearParameters() => clearField(3);
+  void clearParameters() => $_clearField(3);
   @$pb.TagNumber(3)
   OperationParameters ensureParameters() => $_ensure(2);
 }
 
+/// Reveal operation specific data.
+/// Next field: 2
 class RevealOperationData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RevealOperationData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  RevealOperationData._() : super();
   factory RevealOperationData({
     $core.List<$core.int>? publicKey,
   }) {
-    final _result = create();
-    if (publicKey != null) {
-      _result.publicKey = publicKey;
-    }
-    return _result;
+    final result = create();
+    if (publicKey != null) result.publicKey = publicKey;
+    return result;
   }
-  factory RevealOperationData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RevealOperationData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  RevealOperationData._();
+
+  factory RevealOperationData.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory RevealOperationData.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RevealOperationData', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'publicKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   RevealOperationData clone() => RevealOperationData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  RevealOperationData copyWith(void Function(RevealOperationData) updates) => super.copyWith((message) => updates(message as RevealOperationData)) as RevealOperationData; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RevealOperationData copyWith(void Function(RevealOperationData) updates) => super.copyWith((message) => updates(message as RevealOperationData)) as RevealOperationData;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RevealOperationData create() => RevealOperationData._();
+  @$core.override
   RevealOperationData createEmptyInstance() => create();
   static $pb.PbList<RevealOperationData> createRepeated() => $pb.PbList<RevealOperationData>();
   @$core.pragma('dart2js:noInline')
@@ -846,44 +825,45 @@ class RevealOperationData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.List<$core.int> get publicKey => $_getN(0);
   @$pb.TagNumber(1)
-  set publicKey($core.List<$core.int> v) { $_setBytes(0, v); }
+  set publicKey($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasPublicKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPublicKey() => clearField(1);
+  void clearPublicKey() => $_clearField(1);
 }
 
+/// Delegation operation specific data.
+/// Next field: 2
 class DelegationOperationData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DelegationOperationData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'delegate')
-    ..hasRequiredFields = false
-  ;
-
-  DelegationOperationData._() : super();
   factory DelegationOperationData({
     $core.String? delegate,
   }) {
-    final _result = create();
-    if (delegate != null) {
-      _result.delegate = delegate;
-    }
-    return _result;
+    final result = create();
+    if (delegate != null) result.delegate = delegate;
+    return result;
   }
-  factory DelegationOperationData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DelegationOperationData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  DelegationOperationData._();
+
+  factory DelegationOperationData.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory DelegationOperationData.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DelegationOperationData', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Tezos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'delegate')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DelegationOperationData clone() => DelegationOperationData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  DelegationOperationData copyWith(void Function(DelegationOperationData) updates) => super.copyWith((message) => updates(message as DelegationOperationData)) as DelegationOperationData; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DelegationOperationData copyWith(void Function(DelegationOperationData) updates) => super.copyWith((message) => updates(message as DelegationOperationData)) as DelegationOperationData;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DelegationOperationData create() => DelegationOperationData._();
+  @$core.override
   DelegationOperationData createEmptyInstance() => create();
   static $pb.PbList<DelegationOperationData> createRepeated() => $pb.PbList<DelegationOperationData>();
   @$core.pragma('dart2js:noInline')
@@ -893,10 +873,13 @@ class DelegationOperationData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.String get delegate => $_getSZ(0);
   @$pb.TagNumber(1)
-  set delegate($core.String v) { $_setString(0, v); }
+  set delegate($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasDelegate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDelegate() => clearField(1);
+  void clearDelegate() => $_clearField(1);
 }
 
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

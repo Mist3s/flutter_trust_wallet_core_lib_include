@@ -1,39 +1,76 @@
-///
-//  Generated code. Do not modify.
-//  source: Common.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from Common.proto.
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Error codes, used in multiple blockchains.
 class SigningError extends $pb.ProtobufEnum {
-  static const SigningError OK = SigningError._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OK');
-  static const SigningError Error_general = SigningError._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_general');
-  static const SigningError Error_internal = SigningError._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_internal');
-  static const SigningError Error_low_balance = SigningError._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_low_balance');
-  static const SigningError Error_zero_amount_requested = SigningError._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_zero_amount_requested');
-  static const SigningError Error_missing_private_key = SigningError._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_missing_private_key');
-  static const SigningError Error_invalid_private_key = SigningError._(15, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_private_key');
-  static const SigningError Error_invalid_address = SigningError._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_address');
-  static const SigningError Error_invalid_utxo = SigningError._(17, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_utxo');
-  static const SigningError Error_invalid_utxo_amount = SigningError._(18, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_utxo_amount');
-  static const SigningError Error_wrong_fee = SigningError._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_wrong_fee');
-  static const SigningError Error_signing = SigningError._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_signing');
-  static const SigningError Error_tx_too_big = SigningError._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_tx_too_big');
-  static const SigningError Error_missing_input_utxos = SigningError._(9, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_missing_input_utxos');
-  static const SigningError Error_not_enough_utxos = SigningError._(10, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_not_enough_utxos');
-  static const SigningError Error_script_redeem = SigningError._(11, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_script_redeem');
-  static const SigningError Error_script_output = SigningError._(12, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_script_output');
-  static const SigningError Error_script_witness_program = SigningError._(13, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_script_witness_program');
-  static const SigningError Error_invalid_memo = SigningError._(14, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_memo');
-  static const SigningError Error_input_parse = SigningError._(19, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_input_parse');
-  static const SigningError Error_no_support_n2n = SigningError._(20, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_no_support_n2n');
-  static const SigningError Error_signatures_count = SigningError._(21, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_signatures_count');
-  static const SigningError Error_invalid_params = SigningError._(22, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_params');
-  static const SigningError Error_invalid_requested_token_amount = SigningError._(23, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_invalid_requested_token_amount');
+  /// This is the OK case, with value=0
+  static const SigningError OK = SigningError._(0, _omitEnumNames ? '' : 'OK');
+  /// Chain-generic codes:
+  /// Generic error (used if there is no suitable specific error is adequate)
+  static const SigningError Error_general = SigningError._(1, _omitEnumNames ? '' : 'Error_general');
+  /// Internal error, indicates some very unusual, unexpected case
+  static const SigningError Error_internal = SigningError._(2, _omitEnumNames ? '' : 'Error_internal');
+  /// Chain-generic codes, input related:
+  /// Low balance: the sender balance is not enough to cover the send and other auxiliary amount such as fee, deposit, or minimal balance.
+  static const SigningError Error_low_balance = SigningError._(3, _omitEnumNames ? '' : 'Error_low_balance');
+  /// Requested amount is zero, send of 0 makes no sense
+  static const SigningError Error_zero_amount_requested = SigningError._(4, _omitEnumNames ? '' : 'Error_zero_amount_requested');
+  /// One required key is missing (too few or wrong keys are provided)
+  static const SigningError Error_missing_private_key = SigningError._(5, _omitEnumNames ? '' : 'Error_missing_private_key');
+  /// A private key provided is invalid (e.g. wrong size, usually should be 32 bytes)
+  static const SigningError Error_invalid_private_key = SigningError._(15, _omitEnumNames ? '' : 'Error_invalid_private_key');
+  /// A provided address (e.g. destination address) is invalid
+  static const SigningError Error_invalid_address = SigningError._(16, _omitEnumNames ? '' : 'Error_invalid_address');
+  /// A provided input UTXO is invalid
+  static const SigningError Error_invalid_utxo = SigningError._(17, _omitEnumNames ? '' : 'Error_invalid_utxo');
+  /// The amount of an input UTXO is invalid
+  static const SigningError Error_invalid_utxo_amount = SigningError._(18, _omitEnumNames ? '' : 'Error_invalid_utxo_amount');
+  /// Chain-generic, fee related:
+  /// Wrong fee is given, probably it is too low to cover minimal fee for the transaction
+  static const SigningError Error_wrong_fee = SigningError._(6, _omitEnumNames ? '' : 'Error_wrong_fee');
+  /// Chain-generic, signing related:
+  /// General signing error
+  static const SigningError Error_signing = SigningError._(7, _omitEnumNames ? '' : 'Error_signing');
+  /// Resulting transaction is too large
+  /// [NEO] Transaction too big, fee in GAS needed or try send by parts
+  static const SigningError Error_tx_too_big = SigningError._(8, _omitEnumNames ? '' : 'Error_tx_too_big');
+  /// UTXO-chain specific, input related:
+  /// No input UTXOs provided [BTC]
+  static const SigningError Error_missing_input_utxos = SigningError._(9, _omitEnumNames ? '' : 'Error_missing_input_utxos');
+  /// Not enough non-dust input UTXOs to cover requested amount (dust UTXOs are filtered out) [BTC]
+  static const SigningError Error_not_enough_utxos = SigningError._(10, _omitEnumNames ? '' : 'Error_not_enough_utxos');
+  /// UTXO-chain specific, script related:
+  /// [BTC] Missing required redeem script
+  static const SigningError Error_script_redeem = SigningError._(11, _omitEnumNames ? '' : 'Error_script_redeem');
+  /// [BTC] Invalid required output script
+  static const SigningError Error_script_output = SigningError._(12, _omitEnumNames ? '' : 'Error_script_output');
+  /// [BTC] Unrecognized witness program
+  static const SigningError Error_script_witness_program = SigningError._(13, _omitEnumNames ? '' : 'Error_script_witness_program');
+  /// Invalid memo, e.g. [XRP] Invalid tag
+  static const SigningError Error_invalid_memo = SigningError._(14, _omitEnumNames ? '' : 'Error_invalid_memo');
+  /// Some input field cannot be parsed
+  static const SigningError Error_input_parse = SigningError._(19, _omitEnumNames ? '' : 'Error_input_parse');
+  /// Multi-input and multi-output transaction not supported
+  static const SigningError Error_no_support_n2n = SigningError._(20, _omitEnumNames ? '' : 'Error_no_support_n2n');
+  /// Incorrect count of signatures passed to compile
+  static const SigningError Error_signatures_count = SigningError._(21, _omitEnumNames ? '' : 'Error_signatures_count');
+  /// Incorrect input parameter
+  static const SigningError Error_invalid_params = SigningError._(22, _omitEnumNames ? '' : 'Error_invalid_params');
+  /// Invalid input token amount
+  static const SigningError Error_invalid_requested_token_amount = SigningError._(23, _omitEnumNames ? '' : 'Error_invalid_requested_token_amount');
 
   static const $core.List<SigningError> values = <SigningError> [
     OK,
@@ -62,9 +99,11 @@ class SigningError extends $pb.ProtobufEnum {
     Error_invalid_requested_token_amount,
   ];
 
-  static final $core.Map<$core.int, SigningError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SigningError? valueOf($core.int value) => _byValue[value];
+  static final $core.List<SigningError?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 23);
+  static SigningError? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const SigningError._($core.int v, $core.String n) : super(v, n);
+  const SigningError._(super.value, super.name);
 }
 
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

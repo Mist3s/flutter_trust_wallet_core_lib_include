@@ -1,24 +1,30 @@
-///
-//  Generated code. Do not modify.
-//  source: THORChainSwap.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from THORChainSwap.proto.
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Supported blockchains
 class Chain extends $pb.ProtobufEnum {
-  static const Chain THOR = Chain._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'THOR');
-  static const Chain BTC = Chain._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'BTC');
-  static const Chain ETH = Chain._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ETH');
-  static const Chain BNB = Chain._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'BNB');
-  static const Chain DOGE = Chain._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'DOGE');
-  static const Chain BCH = Chain._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'BCH');
-  static const Chain LTC = Chain._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'LTC');
-  static const Chain ATOM = Chain._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ATOM');
-  static const Chain AVAX = Chain._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'AVAX');
+  static const Chain THOR = Chain._(0, _omitEnumNames ? '' : 'THOR');
+  static const Chain BTC = Chain._(1, _omitEnumNames ? '' : 'BTC');
+  static const Chain ETH = Chain._(2, _omitEnumNames ? '' : 'ETH');
+  static const Chain BNB = Chain._(3, _omitEnumNames ? '' : 'BNB');
+  static const Chain DOGE = Chain._(4, _omitEnumNames ? '' : 'DOGE');
+  static const Chain BCH = Chain._(5, _omitEnumNames ? '' : 'BCH');
+  static const Chain LTC = Chain._(6, _omitEnumNames ? '' : 'LTC');
+  static const Chain ATOM = Chain._(7, _omitEnumNames ? '' : 'ATOM');
+  static const Chain AVAX = Chain._(8, _omitEnumNames ? '' : 'AVAX');
 
   static const $core.List<Chain> values = <Chain> [
     THOR,
@@ -32,22 +38,24 @@ class Chain extends $pb.ProtobufEnum {
     AVAX,
   ];
 
-  static final $core.Map<$core.int, Chain> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static Chain? valueOf($core.int value) => _byValue[value];
+  static final $core.List<Chain?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 8);
+  static Chain? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const Chain._($core.int v, $core.String n) : super(v, n);
+  const Chain._(super.value, super.name);
 }
 
+/// Predefined error codes
 class ErrorCode extends $pb.ProtobufEnum {
-  static const ErrorCode OK = ErrorCode._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'OK');
-  static const ErrorCode Error_general = ErrorCode._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_general');
-  static const ErrorCode Error_Input_proto_deserialization = ErrorCode._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Input_proto_deserialization');
-  static const ErrorCode Error_Unsupported_from_chain = ErrorCode._(13, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Unsupported_from_chain');
-  static const ErrorCode Error_Unsupported_to_chain = ErrorCode._(14, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Unsupported_to_chain');
-  static const ErrorCode Error_Invalid_from_address = ErrorCode._(15, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Invalid_from_address');
-  static const ErrorCode Error_Invalid_to_address = ErrorCode._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Invalid_to_address');
-  static const ErrorCode Error_Invalid_vault_address = ErrorCode._(21, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Invalid_vault_address');
-  static const ErrorCode Error_Invalid_router_address = ErrorCode._(22, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Error_Invalid_router_address');
+  /// OK
+  static const ErrorCode OK = ErrorCode._(0, _omitEnumNames ? '' : 'OK');
+  static const ErrorCode Error_general = ErrorCode._(1, _omitEnumNames ? '' : 'Error_general');
+  static const ErrorCode Error_Input_proto_deserialization = ErrorCode._(2, _omitEnumNames ? '' : 'Error_Input_proto_deserialization');
+  static const ErrorCode Error_Unsupported_from_chain = ErrorCode._(13, _omitEnumNames ? '' : 'Error_Unsupported_from_chain');
+  static const ErrorCode Error_Unsupported_to_chain = ErrorCode._(14, _omitEnumNames ? '' : 'Error_Unsupported_to_chain');
+  static const ErrorCode Error_Invalid_from_address = ErrorCode._(15, _omitEnumNames ? '' : 'Error_Invalid_from_address');
+  static const ErrorCode Error_Invalid_to_address = ErrorCode._(16, _omitEnumNames ? '' : 'Error_Invalid_to_address');
+  static const ErrorCode Error_Invalid_vault_address = ErrorCode._(21, _omitEnumNames ? '' : 'Error_Invalid_vault_address');
+  static const ErrorCode Error_Invalid_router_address = ErrorCode._(22, _omitEnumNames ? '' : 'Error_Invalid_router_address');
 
   static const $core.List<ErrorCode> values = <ErrorCode> [
     OK,
@@ -64,6 +72,8 @@ class ErrorCode extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, ErrorCode> _byValue = $pb.ProtobufEnum.initByValue(values);
   static ErrorCode? valueOf($core.int value) => _byValue[value];
 
-  const ErrorCode._($core.int v, $core.String n) : super(v, n);
+  const ErrorCode._(super.value, super.name);
 }
 
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

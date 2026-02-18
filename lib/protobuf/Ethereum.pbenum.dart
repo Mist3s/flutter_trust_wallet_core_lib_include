@@ -1,18 +1,27 @@
-///
-//  Generated code. Do not modify.
-//  source: Ethereum.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from Ethereum.proto.
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Transaction type
 class TransactionMode extends $pb.ProtobufEnum {
-  static const TransactionMode Legacy = TransactionMode._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Legacy');
-  static const TransactionMode Enveloped = TransactionMode._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Enveloped');
-  static const TransactionMode UserOp = TransactionMode._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'UserOp');
+  /// Legacy transaction, pre-EIP2718/EIP1559; for fee gasPrice/gasLimit is used
+  static const TransactionMode Legacy = TransactionMode._(0, _omitEnumNames ? '' : 'Legacy');
+  /// Enveloped transaction EIP2718 (with type 0x2), fee is according to EIP1559 (base fee, inclusion fee, ...)
+  static const TransactionMode Enveloped = TransactionMode._(1, _omitEnumNames ? '' : 'Enveloped');
+  /// EIP4337-compatible UserOperation
+  static const TransactionMode UserOp = TransactionMode._(2, _omitEnumNames ? '' : 'UserOp');
 
   static const $core.List<TransactionMode> values = <TransactionMode> [
     Legacy,
@@ -20,9 +29,11 @@ class TransactionMode extends $pb.ProtobufEnum {
     UserOp,
   ];
 
-  static final $core.Map<$core.int, TransactionMode> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TransactionMode? valueOf($core.int value) => _byValue[value];
+  static final $core.List<TransactionMode?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static TransactionMode? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const TransactionMode._($core.int v, $core.String n) : super(v, n);
+  const TransactionMode._(super.value, super.name);
 }
 
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

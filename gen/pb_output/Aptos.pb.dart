@@ -1,336 +1,333 @@
-///
-//  Generated code. Do not modify.
-//  source: Aptos.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from Aptos.proto.
+
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class TransferMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransferMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-  TransferMessage._() : super();
+/// Necessary fields to process a TransferMessage
+class TransferMessage extends $pb.GeneratedMessage {
   factory TransferMessage({
     $core.String? to,
     $fixnum.Int64? amount,
   }) {
-    final _result = create();
-    if (to != null) {
-      _result.to = to;
-    }
-    if (amount != null) {
-      _result.amount = amount;
-    }
-    return _result;
+    final result = create();
+    if (to != null) result.to = to;
+    if (amount != null) result.amount = amount;
+    return result;
   }
-  factory TransferMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TransferMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  TransferMessage._();
+
+  factory TransferMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TransferMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransferMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'to')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TransferMessage clone() => TransferMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  TransferMessage copyWith(void Function(TransferMessage) updates) => super.copyWith((message) => updates(message as TransferMessage)) as TransferMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TransferMessage copyWith(void Function(TransferMessage) updates) => super.copyWith((message) => updates(message as TransferMessage)) as TransferMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransferMessage create() => TransferMessage._();
+  @$core.override
   TransferMessage createEmptyInstance() => create();
   static $pb.PbList<TransferMessage> createRepeated() => $pb.PbList<TransferMessage>();
   @$core.pragma('dart2js:noInline')
   static TransferMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferMessage>(create);
   static TransferMessage? _defaultInstance;
 
+  /// Destination Account address (string)
   @$pb.TagNumber(1)
   $core.String get to => $_getSZ(0);
   @$pb.TagNumber(1)
-  set to($core.String v) { $_setString(0, v); }
+  set to($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTo() => clearField(1);
+  void clearTo() => $_clearField(1);
 
+  /// Amount to be transferred (uint64)
   @$pb.TagNumber(2)
   $fixnum.Int64 get amount => $_getI64(1);
   @$pb.TagNumber(2)
-  set amount($fixnum.Int64 v) { $_setInt64(1, v); }
+  set amount($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAmount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAmount() => clearField(2);
+  void clearAmount() => $_clearField(2);
 }
 
+/// Necessary tag for type function argument
 class StructTag extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StructTag', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountAddress')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'module')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..hasRequiredFields = false
-  ;
-
-  StructTag._() : super();
   factory StructTag({
     $core.String? accountAddress,
     $core.String? module,
     $core.String? name,
   }) {
-    final _result = create();
-    if (accountAddress != null) {
-      _result.accountAddress = accountAddress;
-    }
-    if (module != null) {
-      _result.module = module;
-    }
-    if (name != null) {
-      _result.name = name;
-    }
-    return _result;
+    final result = create();
+    if (accountAddress != null) result.accountAddress = accountAddress;
+    if (module != null) result.module = module;
+    if (name != null) result.name = name;
+    return result;
   }
-  factory StructTag.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory StructTag.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  StructTag._();
+
+  factory StructTag.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory StructTag.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StructTag', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accountAddress')
+    ..aOS(2, _omitFieldNames ? '' : 'module')
+    ..aOS(3, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   StructTag clone() => StructTag()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  StructTag copyWith(void Function(StructTag) updates) => super.copyWith((message) => updates(message as StructTag)) as StructTag; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  StructTag copyWith(void Function(StructTag) updates) => super.copyWith((message) => updates(message as StructTag)) as StructTag;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StructTag create() => StructTag._();
+  @$core.override
   StructTag createEmptyInstance() => create();
   static $pb.PbList<StructTag> createRepeated() => $pb.PbList<StructTag>();
   @$core.pragma('dart2js:noInline')
   static StructTag getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StructTag>(create);
   static StructTag? _defaultInstance;
 
+  /// Address of the account
   @$pb.TagNumber(1)
   $core.String get accountAddress => $_getSZ(0);
   @$pb.TagNumber(1)
-  set accountAddress($core.String v) { $_setString(0, v); }
+  set accountAddress($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAccountAddress() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccountAddress() => clearField(1);
+  void clearAccountAddress() => $_clearField(1);
 
+  /// Module name
   @$pb.TagNumber(2)
   $core.String get module => $_getSZ(1);
   @$pb.TagNumber(2)
-  set module($core.String v) { $_setString(1, v); }
+  set module($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasModule() => $_has(1);
   @$pb.TagNumber(2)
-  void clearModule() => clearField(2);
+  void clearModule() => $_clearField(2);
 
+  /// Identifier
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
-  set name($core.String v) { $_setString(2, v); }
+  set name($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearName() => $_clearField(3);
 }
 
+/// Necessary fields to process a TokenTransferMessage
 class TokenTransferMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TokenTransferMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'to')
-    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOM<StructTag>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: StructTag.create)
-    ..hasRequiredFields = false
-  ;
-
-  TokenTransferMessage._() : super();
   factory TokenTransferMessage({
     $core.String? to,
     $fixnum.Int64? amount,
     StructTag? function,
   }) {
-    final _result = create();
-    if (to != null) {
-      _result.to = to;
-    }
-    if (amount != null) {
-      _result.amount = amount;
-    }
-    if (function != null) {
-      _result.function = function;
-    }
-    return _result;
+    final result = create();
+    if (to != null) result.to = to;
+    if (amount != null) result.amount = amount;
+    if (function != null) result.function = function;
+    return result;
   }
-  factory TokenTransferMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TokenTransferMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  TokenTransferMessage._();
+
+  factory TokenTransferMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TokenTransferMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TokenTransferMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'to')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<StructTag>(3, _omitFieldNames ? '' : 'function', subBuilder: StructTag.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TokenTransferMessage clone() => TokenTransferMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  TokenTransferMessage copyWith(void Function(TokenTransferMessage) updates) => super.copyWith((message) => updates(message as TokenTransferMessage)) as TokenTransferMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TokenTransferMessage copyWith(void Function(TokenTransferMessage) updates) => super.copyWith((message) => updates(message as TokenTransferMessage)) as TokenTransferMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TokenTransferMessage create() => TokenTransferMessage._();
+  @$core.override
   TokenTransferMessage createEmptyInstance() => create();
   static $pb.PbList<TokenTransferMessage> createRepeated() => $pb.PbList<TokenTransferMessage>();
   @$core.pragma('dart2js:noInline')
   static TokenTransferMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenTransferMessage>(create);
   static TokenTransferMessage? _defaultInstance;
 
+  /// Destination Account address (string)
   @$pb.TagNumber(1)
   $core.String get to => $_getSZ(0);
   @$pb.TagNumber(1)
-  set to($core.String v) { $_setString(0, v); }
+  set to($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasTo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTo() => clearField(1);
+  void clearTo() => $_clearField(1);
 
+  /// Amount to be transferred (uint64)
   @$pb.TagNumber(2)
   $fixnum.Int64 get amount => $_getI64(1);
   @$pb.TagNumber(2)
-  set amount($fixnum.Int64 v) { $_setInt64(1, v); }
+  set amount($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasAmount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAmount() => clearField(2);
+  void clearAmount() => $_clearField(2);
 
+  /// token function to call, e.g BTC: 0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9::coins::BTC
   @$pb.TagNumber(3)
   StructTag get function => $_getN(2);
   @$pb.TagNumber(3)
-  set function(StructTag v) { setField(3, v); }
+  set function(StructTag value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasFunction() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFunction() => clearField(3);
+  void clearFunction() => $_clearField(3);
   @$pb.TagNumber(3)
   StructTag ensureFunction() => $_ensure(2);
 }
 
+/// Necessary fields to process a ManagedTokensRegisterMessage
 class ManagedTokensRegisterMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ManagedTokensRegisterMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOM<StructTag>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: StructTag.create)
-    ..hasRequiredFields = false
-  ;
-
-  ManagedTokensRegisterMessage._() : super();
   factory ManagedTokensRegisterMessage({
     StructTag? function,
   }) {
-    final _result = create();
-    if (function != null) {
-      _result.function = function;
-    }
-    return _result;
+    final result = create();
+    if (function != null) result.function = function;
+    return result;
   }
-  factory ManagedTokensRegisterMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ManagedTokensRegisterMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  ManagedTokensRegisterMessage._();
+
+  factory ManagedTokensRegisterMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ManagedTokensRegisterMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ManagedTokensRegisterMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOM<StructTag>(1, _omitFieldNames ? '' : 'function', subBuilder: StructTag.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ManagedTokensRegisterMessage clone() => ManagedTokensRegisterMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ManagedTokensRegisterMessage copyWith(void Function(ManagedTokensRegisterMessage) updates) => super.copyWith((message) => updates(message as ManagedTokensRegisterMessage)) as ManagedTokensRegisterMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ManagedTokensRegisterMessage copyWith(void Function(ManagedTokensRegisterMessage) updates) => super.copyWith((message) => updates(message as ManagedTokensRegisterMessage)) as ManagedTokensRegisterMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ManagedTokensRegisterMessage create() => ManagedTokensRegisterMessage._();
+  @$core.override
   ManagedTokensRegisterMessage createEmptyInstance() => create();
   static $pb.PbList<ManagedTokensRegisterMessage> createRepeated() => $pb.PbList<ManagedTokensRegisterMessage>();
   @$core.pragma('dart2js:noInline')
   static ManagedTokensRegisterMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ManagedTokensRegisterMessage>(create);
   static ManagedTokensRegisterMessage? _defaultInstance;
 
+  /// token function to register, e.g BTC: 0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9::coins::BTC
   @$pb.TagNumber(1)
   StructTag get function => $_getN(0);
   @$pb.TagNumber(1)
-  set function(StructTag v) { setField(1, v); }
+  set function(StructTag value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasFunction() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFunction() => clearField(1);
+  void clearFunction() => $_clearField(1);
   @$pb.TagNumber(1)
   StructTag ensureFunction() => $_ensure(0);
 }
 
+/// Necessary fields to process a CreateAccountMessage
 class CreateAccountMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateAccountMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authKey')
-    ..hasRequiredFields = false
-  ;
-
-  CreateAccountMessage._() : super();
   factory CreateAccountMessage({
     $core.String? authKey,
   }) {
-    final _result = create();
-    if (authKey != null) {
-      _result.authKey = authKey;
-    }
-    return _result;
+    final result = create();
+    if (authKey != null) result.authKey = authKey;
+    return result;
   }
-  factory CreateAccountMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CreateAccountMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  CreateAccountMessage._();
+
+  factory CreateAccountMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CreateAccountMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateAccountMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'authKey')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CreateAccountMessage clone() => CreateAccountMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CreateAccountMessage copyWith(void Function(CreateAccountMessage) updates) => super.copyWith((message) => updates(message as CreateAccountMessage)) as CreateAccountMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CreateAccountMessage copyWith(void Function(CreateAccountMessage) updates) => super.copyWith((message) => updates(message as CreateAccountMessage)) as CreateAccountMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateAccountMessage create() => CreateAccountMessage._();
+  @$core.override
   CreateAccountMessage createEmptyInstance() => create();
   static $pb.PbList<CreateAccountMessage> createRepeated() => $pb.PbList<CreateAccountMessage>();
   @$core.pragma('dart2js:noInline')
   static CreateAccountMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAccountMessage>(create);
   static CreateAccountMessage? _defaultInstance;
 
+  /// auth account address to create
   @$pb.TagNumber(1)
   $core.String get authKey => $_getSZ(0);
   @$pb.TagNumber(1)
-  set authKey($core.String v) { $_setString(0, v); }
+  set authKey($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasAuthKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAuthKey() => clearField(1);
+  void clearAuthKey() => $_clearField(1);
 }
 
+/// Necessary fields to process an OfferNftMessage
 class OfferNftMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'OfferNftMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiver')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'creator')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'collectionName', protoName: 'collectionName')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  OfferNftMessage._() : super();
   factory OfferNftMessage({
     $core.String? receiver,
     $core.String? creator,
@@ -339,114 +336,111 @@ class OfferNftMessage extends $pb.GeneratedMessage {
     $fixnum.Int64? propertyVersion,
     $fixnum.Int64? amount,
   }) {
-    final _result = create();
-    if (receiver != null) {
-      _result.receiver = receiver;
-    }
-    if (creator != null) {
-      _result.creator = creator;
-    }
-    if (collectionName != null) {
-      _result.collectionName = collectionName;
-    }
-    if (name != null) {
-      _result.name = name;
-    }
-    if (propertyVersion != null) {
-      _result.propertyVersion = propertyVersion;
-    }
-    if (amount != null) {
-      _result.amount = amount;
-    }
-    return _result;
+    final result = create();
+    if (receiver != null) result.receiver = receiver;
+    if (creator != null) result.creator = creator;
+    if (collectionName != null) result.collectionName = collectionName;
+    if (name != null) result.name = name;
+    if (propertyVersion != null) result.propertyVersion = propertyVersion;
+    if (amount != null) result.amount = amount;
+    return result;
   }
-  factory OfferNftMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory OfferNftMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  OfferNftMessage._();
+
+  factory OfferNftMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory OfferNftMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OfferNftMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'receiver')
+    ..aOS(2, _omitFieldNames ? '' : 'creator')
+    ..aOS(3, _omitFieldNames ? '' : 'collectionName', protoName: 'collectionName')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   OfferNftMessage clone() => OfferNftMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  OfferNftMessage copyWith(void Function(OfferNftMessage) updates) => super.copyWith((message) => updates(message as OfferNftMessage)) as OfferNftMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  OfferNftMessage copyWith(void Function(OfferNftMessage) updates) => super.copyWith((message) => updates(message as OfferNftMessage)) as OfferNftMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OfferNftMessage create() => OfferNftMessage._();
+  @$core.override
   OfferNftMessage createEmptyInstance() => create();
   static $pb.PbList<OfferNftMessage> createRepeated() => $pb.PbList<OfferNftMessage>();
   @$core.pragma('dart2js:noInline')
   static OfferNftMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OfferNftMessage>(create);
   static OfferNftMessage? _defaultInstance;
 
+  /// Receiver address
   @$pb.TagNumber(1)
   $core.String get receiver => $_getSZ(0);
   @$pb.TagNumber(1)
-  set receiver($core.String v) { $_setString(0, v); }
+  set receiver($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasReceiver() => $_has(0);
   @$pb.TagNumber(1)
-  void clearReceiver() => clearField(1);
+  void clearReceiver() => $_clearField(1);
 
+  /// Creator address
   @$pb.TagNumber(2)
   $core.String get creator => $_getSZ(1);
   @$pb.TagNumber(2)
-  set creator($core.String v) { $_setString(1, v); }
+  set creator($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCreator() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreator() => clearField(2);
+  void clearCreator() => $_clearField(2);
 
+  /// Name of the collection
   @$pb.TagNumber(3)
   $core.String get collectionName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set collectionName($core.String v) { $_setString(2, v); }
+  set collectionName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCollectionName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCollectionName() => clearField(3);
+  void clearCollectionName() => $_clearField(3);
 
+  /// Name of the NFT
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
-  set name($core.String v) { $_setString(3, v); }
+  set name($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
+  /// Property version (should be often 0)
   @$pb.TagNumber(5)
   $fixnum.Int64 get propertyVersion => $_getI64(4);
   @$pb.TagNumber(5)
-  set propertyVersion($fixnum.Int64 v) { $_setInt64(4, v); }
+  set propertyVersion($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPropertyVersion() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPropertyVersion() => clearField(5);
+  void clearPropertyVersion() => $_clearField(5);
 
+  /// Amount of NFT's to transfer (should be often 1)
   @$pb.TagNumber(6)
   $fixnum.Int64 get amount => $_getI64(5);
   @$pb.TagNumber(6)
-  set amount($fixnum.Int64 v) { $_setInt64(5, v); }
+  set amount($fixnum.Int64 value) => $_setInt64(5, value);
   @$pb.TagNumber(6)
   $core.bool hasAmount() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAmount() => clearField(6);
+  void clearAmount() => $_clearField(6);
 }
 
+/// Necessary fields to process an CancelOfferNftMessage
 class CancelOfferNftMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CancelOfferNftMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiver')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'creator')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'collectionName', protoName: 'collectionName')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  CancelOfferNftMessage._() : super();
   factory CancelOfferNftMessage({
     $core.String? receiver,
     $core.String? creator,
@@ -454,102 +448,99 @@ class CancelOfferNftMessage extends $pb.GeneratedMessage {
     $core.String? name,
     $fixnum.Int64? propertyVersion,
   }) {
-    final _result = create();
-    if (receiver != null) {
-      _result.receiver = receiver;
-    }
-    if (creator != null) {
-      _result.creator = creator;
-    }
-    if (collectionName != null) {
-      _result.collectionName = collectionName;
-    }
-    if (name != null) {
-      _result.name = name;
-    }
-    if (propertyVersion != null) {
-      _result.propertyVersion = propertyVersion;
-    }
-    return _result;
+    final result = create();
+    if (receiver != null) result.receiver = receiver;
+    if (creator != null) result.creator = creator;
+    if (collectionName != null) result.collectionName = collectionName;
+    if (name != null) result.name = name;
+    if (propertyVersion != null) result.propertyVersion = propertyVersion;
+    return result;
   }
-  factory CancelOfferNftMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CancelOfferNftMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  CancelOfferNftMessage._();
+
+  factory CancelOfferNftMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CancelOfferNftMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CancelOfferNftMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'receiver')
+    ..aOS(2, _omitFieldNames ? '' : 'creator')
+    ..aOS(3, _omitFieldNames ? '' : 'collectionName', protoName: 'collectionName')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   CancelOfferNftMessage clone() => CancelOfferNftMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CancelOfferNftMessage copyWith(void Function(CancelOfferNftMessage) updates) => super.copyWith((message) => updates(message as CancelOfferNftMessage)) as CancelOfferNftMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CancelOfferNftMessage copyWith(void Function(CancelOfferNftMessage) updates) => super.copyWith((message) => updates(message as CancelOfferNftMessage)) as CancelOfferNftMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CancelOfferNftMessage create() => CancelOfferNftMessage._();
+  @$core.override
   CancelOfferNftMessage createEmptyInstance() => create();
   static $pb.PbList<CancelOfferNftMessage> createRepeated() => $pb.PbList<CancelOfferNftMessage>();
   @$core.pragma('dart2js:noInline')
   static CancelOfferNftMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CancelOfferNftMessage>(create);
   static CancelOfferNftMessage? _defaultInstance;
 
+  /// Receiver address
   @$pb.TagNumber(1)
   $core.String get receiver => $_getSZ(0);
   @$pb.TagNumber(1)
-  set receiver($core.String v) { $_setString(0, v); }
+  set receiver($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasReceiver() => $_has(0);
   @$pb.TagNumber(1)
-  void clearReceiver() => clearField(1);
+  void clearReceiver() => $_clearField(1);
 
+  /// Creator address
   @$pb.TagNumber(2)
   $core.String get creator => $_getSZ(1);
   @$pb.TagNumber(2)
-  set creator($core.String v) { $_setString(1, v); }
+  set creator($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCreator() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreator() => clearField(2);
+  void clearCreator() => $_clearField(2);
 
+  /// Name of the collection
   @$pb.TagNumber(3)
   $core.String get collectionName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set collectionName($core.String v) { $_setString(2, v); }
+  set collectionName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCollectionName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCollectionName() => clearField(3);
+  void clearCollectionName() => $_clearField(3);
 
+  /// Name of the NFT
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
-  set name($core.String v) { $_setString(3, v); }
+  set name($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
+  /// Property version (should be often 0)
   @$pb.TagNumber(5)
   $fixnum.Int64 get propertyVersion => $_getI64(4);
   @$pb.TagNumber(5)
-  set propertyVersion($fixnum.Int64 v) { $_setInt64(4, v); }
+  set propertyVersion($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPropertyVersion() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPropertyVersion() => clearField(5);
+  void clearPropertyVersion() => $_clearField(5);
 }
 
+/// Necessary fields to process an ClaimNftMessage
 class ClaimNftMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ClaimNftMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sender')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'creator')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'collectionName', protoName: 'collectionName')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false
-  ;
-
-  ClaimNftMessage._() : super();
   factory ClaimNftMessage({
     $core.String? sender,
     $core.String? creator,
@@ -557,89 +548,95 @@ class ClaimNftMessage extends $pb.GeneratedMessage {
     $core.String? name,
     $fixnum.Int64? propertyVersion,
   }) {
-    final _result = create();
-    if (sender != null) {
-      _result.sender = sender;
-    }
-    if (creator != null) {
-      _result.creator = creator;
-    }
-    if (collectionName != null) {
-      _result.collectionName = collectionName;
-    }
-    if (name != null) {
-      _result.name = name;
-    }
-    if (propertyVersion != null) {
-      _result.propertyVersion = propertyVersion;
-    }
-    return _result;
+    final result = create();
+    if (sender != null) result.sender = sender;
+    if (creator != null) result.creator = creator;
+    if (collectionName != null) result.collectionName = collectionName;
+    if (name != null) result.name = name;
+    if (propertyVersion != null) result.propertyVersion = propertyVersion;
+    return result;
   }
-  factory ClaimNftMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ClaimNftMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  ClaimNftMessage._();
+
+  factory ClaimNftMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ClaimNftMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ClaimNftMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sender')
+    ..aOS(2, _omitFieldNames ? '' : 'creator')
+    ..aOS(3, _omitFieldNames ? '' : 'collectionName', protoName: 'collectionName')
+    ..aOS(4, _omitFieldNames ? '' : 'name')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'propertyVersion', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   ClaimNftMessage clone() => ClaimNftMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ClaimNftMessage copyWith(void Function(ClaimNftMessage) updates) => super.copyWith((message) => updates(message as ClaimNftMessage)) as ClaimNftMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  ClaimNftMessage copyWith(void Function(ClaimNftMessage) updates) => super.copyWith((message) => updates(message as ClaimNftMessage)) as ClaimNftMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ClaimNftMessage create() => ClaimNftMessage._();
+  @$core.override
   ClaimNftMessage createEmptyInstance() => create();
   static $pb.PbList<ClaimNftMessage> createRepeated() => $pb.PbList<ClaimNftMessage>();
   @$core.pragma('dart2js:noInline')
   static ClaimNftMessage getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClaimNftMessage>(create);
   static ClaimNftMessage? _defaultInstance;
 
+  /// Sender address
   @$pb.TagNumber(1)
   $core.String get sender => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sender($core.String v) { $_setString(0, v); }
+  set sender($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSender() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSender() => clearField(1);
+  void clearSender() => $_clearField(1);
 
+  /// Creator address
   @$pb.TagNumber(2)
   $core.String get creator => $_getSZ(1);
   @$pb.TagNumber(2)
-  set creator($core.String v) { $_setString(1, v); }
+  set creator($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasCreator() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCreator() => clearField(2);
+  void clearCreator() => $_clearField(2);
 
+  /// Name of the collection
   @$pb.TagNumber(3)
   $core.String get collectionName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set collectionName($core.String v) { $_setString(2, v); }
+  set collectionName($core.String value) => $_setString(2, value);
   @$pb.TagNumber(3)
   $core.bool hasCollectionName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearCollectionName() => clearField(3);
+  void clearCollectionName() => $_clearField(3);
 
+  /// Name of the NFT
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
-  set name($core.String v) { $_setString(3, v); }
+  set name($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
+  /// Property version (should be often 0)
   @$pb.TagNumber(5)
   $fixnum.Int64 get propertyVersion => $_getI64(4);
   @$pb.TagNumber(5)
-  set propertyVersion($fixnum.Int64 v) { $_setInt64(4, v); }
+  set propertyVersion($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasPropertyVersion() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPropertyVersion() => clearField(5);
+  void clearPropertyVersion() => $_clearField(5);
 }
 
 enum NftMessage_NftTransactionPayload {
@@ -650,53 +647,48 @@ enum NftMessage_NftTransactionPayload {
 }
 
 class NftMessage extends $pb.GeneratedMessage {
+  factory NftMessage({
+    OfferNftMessage? offerNft,
+    CancelOfferNftMessage? cancelOfferNft,
+    ClaimNftMessage? claimNft,
+  }) {
+    final result = create();
+    if (offerNft != null) result.offerNft = offerNft;
+    if (cancelOfferNft != null) result.cancelOfferNft = cancelOfferNft;
+    if (claimNft != null) result.claimNft = claimNft;
+    return result;
+  }
+
+  NftMessage._();
+
+  factory NftMessage.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory NftMessage.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
   static const $core.Map<$core.int, NftMessage_NftTransactionPayload> _NftMessage_NftTransactionPayloadByTag = {
     1 : NftMessage_NftTransactionPayload.offerNft,
     2 : NftMessage_NftTransactionPayload.cancelOfferNft,
     3 : NftMessage_NftTransactionPayload.claimNft,
     0 : NftMessage_NftTransactionPayload.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NftMessage', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NftMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<OfferNftMessage>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offerNft', subBuilder: OfferNftMessage.create)
-    ..aOM<CancelOfferNftMessage>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cancelOfferNft', subBuilder: CancelOfferNftMessage.create)
-    ..aOM<ClaimNftMessage>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'claimNft', subBuilder: ClaimNftMessage.create)
+    ..aOM<OfferNftMessage>(1, _omitFieldNames ? '' : 'offerNft', subBuilder: OfferNftMessage.create)
+    ..aOM<CancelOfferNftMessage>(2, _omitFieldNames ? '' : 'cancelOfferNft', subBuilder: CancelOfferNftMessage.create)
+    ..aOM<ClaimNftMessage>(3, _omitFieldNames ? '' : 'claimNft', subBuilder: ClaimNftMessage.create)
     ..hasRequiredFields = false
   ;
 
-  NftMessage._() : super();
-  factory NftMessage({
-    OfferNftMessage? offerNft,
-    CancelOfferNftMessage? cancelOfferNft,
-    ClaimNftMessage? claimNft,
-  }) {
-    final _result = create();
-    if (offerNft != null) {
-      _result.offerNft = offerNft;
-    }
-    if (cancelOfferNft != null) {
-      _result.cancelOfferNft = cancelOfferNft;
-    }
-    if (claimNft != null) {
-      _result.claimNft = claimNft;
-    }
-    return _result;
-  }
-  factory NftMessage.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NftMessage.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   NftMessage clone() => NftMessage()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NftMessage copyWith(void Function(NftMessage) updates) => super.copyWith((message) => updates(message as NftMessage)) as NftMessage; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  NftMessage copyWith(void Function(NftMessage) updates) => super.copyWith((message) => updates(message as NftMessage)) as NftMessage;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static NftMessage create() => NftMessage._();
+  @$core.override
   NftMessage createEmptyInstance() => create();
   static $pb.PbList<NftMessage> createRepeated() => $pb.PbList<NftMessage>();
   @$core.pragma('dart2js:noInline')
@@ -704,38 +696,38 @@ class NftMessage extends $pb.GeneratedMessage {
   static NftMessage? _defaultInstance;
 
   NftMessage_NftTransactionPayload whichNftTransactionPayload() => _NftMessage_NftTransactionPayloadByTag[$_whichOneof(0)]!;
-  void clearNftTransactionPayload() => clearField($_whichOneof(0));
+  void clearNftTransactionPayload() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   OfferNftMessage get offerNft => $_getN(0);
   @$pb.TagNumber(1)
-  set offerNft(OfferNftMessage v) { setField(1, v); }
+  set offerNft(OfferNftMessage value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasOfferNft() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOfferNft() => clearField(1);
+  void clearOfferNft() => $_clearField(1);
   @$pb.TagNumber(1)
   OfferNftMessage ensureOfferNft() => $_ensure(0);
 
   @$pb.TagNumber(2)
   CancelOfferNftMessage get cancelOfferNft => $_getN(1);
   @$pb.TagNumber(2)
-  set cancelOfferNft(CancelOfferNftMessage v) { setField(2, v); }
+  set cancelOfferNft(CancelOfferNftMessage value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasCancelOfferNft() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCancelOfferNft() => clearField(2);
+  void clearCancelOfferNft() => $_clearField(2);
   @$pb.TagNumber(2)
   CancelOfferNftMessage ensureCancelOfferNft() => $_ensure(1);
 
   @$pb.TagNumber(3)
   ClaimNftMessage get claimNft => $_getN(2);
   @$pb.TagNumber(3)
-  set claimNft(ClaimNftMessage v) { setField(3, v); }
+  set claimNft(ClaimNftMessage value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasClaimNft() => $_has(2);
   @$pb.TagNumber(3)
-  void clearClaimNft() => clearField(3);
+  void clearClaimNft() => $_clearField(3);
   @$pb.TagNumber(3)
   ClaimNftMessage ensureClaimNft() => $_ensure(2);
 }
@@ -749,34 +741,8 @@ enum SigningInput_TransactionPayload {
   notSet
 }
 
+/// Input data necessary to create a signed transaction.
 class SigningInput extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, SigningInput_TransactionPayload> _SigningInput_TransactionPayloadByTag = {
-    9 : SigningInput_TransactionPayload.transfer,
-    10 : SigningInput_TransactionPayload.tokenTransfer,
-    11 : SigningInput_TransactionPayload.createAccount,
-    12 : SigningInput_TransactionPayload.nftMessage,
-    13 : SigningInput_TransactionPayload.registerToken,
-    0 : SigningInput_TransactionPayload.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..oo(0, [9, 10, 11, 12, 13])
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sender')
-    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sequenceNumber')
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maxGasAmount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gasUnitPrice', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expirationTimestampSecs', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainId', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'anyEncoded')
-    ..aOM<TransferMessage>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transfer', subBuilder: TransferMessage.create)
-    ..aOM<TokenTransferMessage>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenTransfer', subBuilder: TokenTransferMessage.create)
-    ..aOM<CreateAccountMessage>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createAccount', subBuilder: CreateAccountMessage.create)
-    ..aOM<NftMessage>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nftMessage', subBuilder: NftMessage.create)
-    ..aOM<ManagedTokensRegisterMessage>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'registerToken', subBuilder: ManagedTokensRegisterMessage.create)
-    ..hasRequiredFields = false
-  ;
-
-  SigningInput._() : super();
   factory SigningInput({
     $core.String? sender,
     $fixnum.Int64? sequenceNumber,
@@ -792,63 +758,65 @@ class SigningInput extends $pb.GeneratedMessage {
     NftMessage? nftMessage,
     ManagedTokensRegisterMessage? registerToken,
   }) {
-    final _result = create();
-    if (sender != null) {
-      _result.sender = sender;
-    }
-    if (sequenceNumber != null) {
-      _result.sequenceNumber = sequenceNumber;
-    }
-    if (maxGasAmount != null) {
-      _result.maxGasAmount = maxGasAmount;
-    }
-    if (gasUnitPrice != null) {
-      _result.gasUnitPrice = gasUnitPrice;
-    }
-    if (expirationTimestampSecs != null) {
-      _result.expirationTimestampSecs = expirationTimestampSecs;
-    }
-    if (chainId != null) {
-      _result.chainId = chainId;
-    }
-    if (privateKey != null) {
-      _result.privateKey = privateKey;
-    }
-    if (anyEncoded != null) {
-      _result.anyEncoded = anyEncoded;
-    }
-    if (transfer != null) {
-      _result.transfer = transfer;
-    }
-    if (tokenTransfer != null) {
-      _result.tokenTransfer = tokenTransfer;
-    }
-    if (createAccount != null) {
-      _result.createAccount = createAccount;
-    }
-    if (nftMessage != null) {
-      _result.nftMessage = nftMessage;
-    }
-    if (registerToken != null) {
-      _result.registerToken = registerToken;
-    }
-    return _result;
+    final result = create();
+    if (sender != null) result.sender = sender;
+    if (sequenceNumber != null) result.sequenceNumber = sequenceNumber;
+    if (maxGasAmount != null) result.maxGasAmount = maxGasAmount;
+    if (gasUnitPrice != null) result.gasUnitPrice = gasUnitPrice;
+    if (expirationTimestampSecs != null) result.expirationTimestampSecs = expirationTimestampSecs;
+    if (chainId != null) result.chainId = chainId;
+    if (privateKey != null) result.privateKey = privateKey;
+    if (anyEncoded != null) result.anyEncoded = anyEncoded;
+    if (transfer != null) result.transfer = transfer;
+    if (tokenTransfer != null) result.tokenTransfer = tokenTransfer;
+    if (createAccount != null) result.createAccount = createAccount;
+    if (nftMessage != null) result.nftMessage = nftMessage;
+    if (registerToken != null) result.registerToken = registerToken;
+    return result;
   }
-  factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  SigningInput._();
+
+  factory SigningInput.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SigningInput.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, SigningInput_TransactionPayload> _SigningInput_TransactionPayloadByTag = {
+    9 : SigningInput_TransactionPayload.transfer,
+    10 : SigningInput_TransactionPayload.tokenTransfer,
+    11 : SigningInput_TransactionPayload.createAccount,
+    12 : SigningInput_TransactionPayload.nftMessage,
+    13 : SigningInput_TransactionPayload.registerToken,
+    0 : SigningInput_TransactionPayload.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningInput', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..oo(0, [9, 10, 11, 12, 13])
+    ..aOS(1, _omitFieldNames ? '' : 'sender')
+    ..aInt64(2, _omitFieldNames ? '' : 'sequenceNumber')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'maxGasAmount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'gasUnitPrice', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'expirationTimestampSecs', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'chainId', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..aOS(8, _omitFieldNames ? '' : 'anyEncoded')
+    ..aOM<TransferMessage>(9, _omitFieldNames ? '' : 'transfer', subBuilder: TransferMessage.create)
+    ..aOM<TokenTransferMessage>(10, _omitFieldNames ? '' : 'tokenTransfer', subBuilder: TokenTransferMessage.create)
+    ..aOM<CreateAccountMessage>(11, _omitFieldNames ? '' : 'createAccount', subBuilder: CreateAccountMessage.create)
+    ..aOM<NftMessage>(12, _omitFieldNames ? '' : 'nftMessage', subBuilder: NftMessage.create)
+    ..aOM<ManagedTokensRegisterMessage>(13, _omitFieldNames ? '' : 'registerToken', subBuilder: ManagedTokensRegisterMessage.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SigningInput clone() => SigningInput()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
+  @$core.override
   SigningInput createEmptyInstance() => create();
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
@@ -856,285 +824,294 @@ class SigningInput extends $pb.GeneratedMessage {
   static SigningInput? _defaultInstance;
 
   SigningInput_TransactionPayload whichTransactionPayload() => _SigningInput_TransactionPayloadByTag[$_whichOneof(0)]!;
-  void clearTransactionPayload() => clearField($_whichOneof(0));
+  void clearTransactionPayload() => $_clearField($_whichOneof(0));
 
+  /// Sender Account address (string)
   @$pb.TagNumber(1)
   $core.String get sender => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sender($core.String v) { $_setString(0, v); }
+  set sender($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSender() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSender() => clearField(1);
+  void clearSender() => $_clearField(1);
 
+  /// Sequence number, incremented atomically for each tx present on the account, start at 0 (int64)
   @$pb.TagNumber(2)
   $fixnum.Int64 get sequenceNumber => $_getI64(1);
   @$pb.TagNumber(2)
-  set sequenceNumber($fixnum.Int64 v) { $_setInt64(1, v); }
+  set sequenceNumber($fixnum.Int64 value) => $_setInt64(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSequenceNumber() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSequenceNumber() => clearField(2);
+  void clearSequenceNumber() => $_clearField(2);
 
+  /// Max gas amount that the user is willing to pay (uint64)
   @$pb.TagNumber(3)
   $fixnum.Int64 get maxGasAmount => $_getI64(2);
   @$pb.TagNumber(3)
-  set maxGasAmount($fixnum.Int64 v) { $_setInt64(2, v); }
+  set maxGasAmount($fixnum.Int64 value) => $_setInt64(2, value);
   @$pb.TagNumber(3)
   $core.bool hasMaxGasAmount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMaxGasAmount() => clearField(3);
+  void clearMaxGasAmount() => $_clearField(3);
 
+  /// Gas unit price - queried through API (uint64)
   @$pb.TagNumber(4)
   $fixnum.Int64 get gasUnitPrice => $_getI64(3);
   @$pb.TagNumber(4)
-  set gasUnitPrice($fixnum.Int64 v) { $_setInt64(3, v); }
+  set gasUnitPrice($fixnum.Int64 value) => $_setInt64(3, value);
   @$pb.TagNumber(4)
   $core.bool hasGasUnitPrice() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGasUnitPrice() => clearField(4);
+  void clearGasUnitPrice() => $_clearField(4);
 
+  /// Expiration timestamp for the transaction, can't be in the past (uint64)
   @$pb.TagNumber(5)
   $fixnum.Int64 get expirationTimestampSecs => $_getI64(4);
   @$pb.TagNumber(5)
-  set expirationTimestampSecs($fixnum.Int64 v) { $_setInt64(4, v); }
+  set expirationTimestampSecs($fixnum.Int64 value) => $_setInt64(4, value);
   @$pb.TagNumber(5)
   $core.bool hasExpirationTimestampSecs() => $_has(4);
   @$pb.TagNumber(5)
-  void clearExpirationTimestampSecs() => clearField(5);
+  void clearExpirationTimestampSecs() => $_clearField(5);
 
+  /// Chain id 1 (mainnet) 32(devnet) (uint32 - casted in uint8_t later)
   @$pb.TagNumber(6)
   $core.int get chainId => $_getIZ(5);
   @$pb.TagNumber(6)
-  set chainId($core.int v) { $_setUnsignedInt32(5, v); }
+  set chainId($core.int value) => $_setUnsignedInt32(5, value);
   @$pb.TagNumber(6)
   $core.bool hasChainId() => $_has(5);
   @$pb.TagNumber(6)
-  void clearChainId() => clearField(6);
+  void clearChainId() => $_clearField(6);
 
+  /// Private key to sign the transaction (bytes)
   @$pb.TagNumber(7)
   $core.List<$core.int> get privateKey => $_getN(6);
   @$pb.TagNumber(7)
-  set privateKey($core.List<$core.int> v) { $_setBytes(6, v); }
+  set privateKey($core.List<$core.int> value) => $_setBytes(6, value);
   @$pb.TagNumber(7)
   $core.bool hasPrivateKey() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPrivateKey() => clearField(7);
+  void clearPrivateKey() => $_clearField(7);
 
+  /// hex encoded function to sign, use it for smart contract approval (string)
   @$pb.TagNumber(8)
   $core.String get anyEncoded => $_getSZ(7);
   @$pb.TagNumber(8)
-  set anyEncoded($core.String v) { $_setString(7, v); }
+  set anyEncoded($core.String value) => $_setString(7, value);
   @$pb.TagNumber(8)
   $core.bool hasAnyEncoded() => $_has(7);
   @$pb.TagNumber(8)
-  void clearAnyEncoded() => clearField(8);
+  void clearAnyEncoded() => $_clearField(8);
 
   @$pb.TagNumber(9)
   TransferMessage get transfer => $_getN(8);
   @$pb.TagNumber(9)
-  set transfer(TransferMessage v) { setField(9, v); }
+  set transfer(TransferMessage value) => $_setField(9, value);
   @$pb.TagNumber(9)
   $core.bool hasTransfer() => $_has(8);
   @$pb.TagNumber(9)
-  void clearTransfer() => clearField(9);
+  void clearTransfer() => $_clearField(9);
   @$pb.TagNumber(9)
   TransferMessage ensureTransfer() => $_ensure(8);
 
   @$pb.TagNumber(10)
   TokenTransferMessage get tokenTransfer => $_getN(9);
   @$pb.TagNumber(10)
-  set tokenTransfer(TokenTransferMessage v) { setField(10, v); }
+  set tokenTransfer(TokenTransferMessage value) => $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasTokenTransfer() => $_has(9);
   @$pb.TagNumber(10)
-  void clearTokenTransfer() => clearField(10);
+  void clearTokenTransfer() => $_clearField(10);
   @$pb.TagNumber(10)
   TokenTransferMessage ensureTokenTransfer() => $_ensure(9);
 
   @$pb.TagNumber(11)
   CreateAccountMessage get createAccount => $_getN(10);
   @$pb.TagNumber(11)
-  set createAccount(CreateAccountMessage v) { setField(11, v); }
+  set createAccount(CreateAccountMessage value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasCreateAccount() => $_has(10);
   @$pb.TagNumber(11)
-  void clearCreateAccount() => clearField(11);
+  void clearCreateAccount() => $_clearField(11);
   @$pb.TagNumber(11)
   CreateAccountMessage ensureCreateAccount() => $_ensure(10);
 
   @$pb.TagNumber(12)
   NftMessage get nftMessage => $_getN(11);
   @$pb.TagNumber(12)
-  set nftMessage(NftMessage v) { setField(12, v); }
+  set nftMessage(NftMessage value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasNftMessage() => $_has(11);
   @$pb.TagNumber(12)
-  void clearNftMessage() => clearField(12);
+  void clearNftMessage() => $_clearField(12);
   @$pb.TagNumber(12)
   NftMessage ensureNftMessage() => $_ensure(11);
 
   @$pb.TagNumber(13)
   ManagedTokensRegisterMessage get registerToken => $_getN(12);
   @$pb.TagNumber(13)
-  set registerToken(ManagedTokensRegisterMessage v) { setField(13, v); }
+  set registerToken(ManagedTokensRegisterMessage value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasRegisterToken() => $_has(12);
   @$pb.TagNumber(13)
-  void clearRegisterToken() => clearField(13);
+  void clearRegisterToken() => $_clearField(13);
   @$pb.TagNumber(13)
   ManagedTokensRegisterMessage ensureRegisterToken() => $_ensure(12);
 }
 
+/// Information related to the signed transaction
 class TransactionAuthenticator extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TransactionAuthenticator', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicKey', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  TransactionAuthenticator._() : super();
   factory TransactionAuthenticator({
     $core.List<$core.int>? signature,
     $core.List<$core.int>? publicKey,
   }) {
-    final _result = create();
-    if (signature != null) {
-      _result.signature = signature;
-    }
-    if (publicKey != null) {
-      _result.publicKey = publicKey;
-    }
-    return _result;
+    final result = create();
+    if (signature != null) result.signature = signature;
+    if (publicKey != null) result.publicKey = publicKey;
+    return result;
   }
-  factory TransactionAuthenticator.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory TransactionAuthenticator.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  TransactionAuthenticator._();
+
+  factory TransactionAuthenticator.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TransactionAuthenticator.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TransactionAuthenticator', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'publicKey', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   TransactionAuthenticator clone() => TransactionAuthenticator()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  TransactionAuthenticator copyWith(void Function(TransactionAuthenticator) updates) => super.copyWith((message) => updates(message as TransactionAuthenticator)) as TransactionAuthenticator; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TransactionAuthenticator copyWith(void Function(TransactionAuthenticator) updates) => super.copyWith((message) => updates(message as TransactionAuthenticator)) as TransactionAuthenticator;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TransactionAuthenticator create() => TransactionAuthenticator._();
+  @$core.override
   TransactionAuthenticator createEmptyInstance() => create();
   static $pb.PbList<TransactionAuthenticator> createRepeated() => $pb.PbList<TransactionAuthenticator>();
   @$core.pragma('dart2js:noInline')
   static TransactionAuthenticator getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionAuthenticator>(create);
   static TransactionAuthenticator? _defaultInstance;
 
+  /// Signature part of the signed transaction (bytes)
   @$pb.TagNumber(1)
   $core.List<$core.int> get signature => $_getN(0);
   @$pb.TagNumber(1)
-  set signature($core.List<$core.int> v) { $_setBytes(0, v); }
+  set signature($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSignature() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSignature() => clearField(1);
+  void clearSignature() => $_clearField(1);
 
+  /// Public key of the signer (bytes)
   @$pb.TagNumber(2)
   $core.List<$core.int> get publicKey => $_getN(1);
   @$pb.TagNumber(2)
-  set publicKey($core.List<$core.int> v) { $_setBytes(1, v); }
+  set publicKey($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasPublicKey() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPublicKey() => clearField(2);
+  void clearPublicKey() => $_clearField(2);
 }
 
+/// Transaction signing output.
 class SigningOutput extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rawTxn', $pb.PbFieldType.OY)
-    ..aOM<TransactionAuthenticator>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authenticator', subBuilder: TransactionAuthenticator.create)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'encoded', $pb.PbFieldType.OY)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'json')
-    ..hasRequiredFields = false
-  ;
-
-  SigningOutput._() : super();
   factory SigningOutput({
     $core.List<$core.int>? rawTxn,
     TransactionAuthenticator? authenticator,
     $core.List<$core.int>? encoded,
     $core.String? json,
   }) {
-    final _result = create();
-    if (rawTxn != null) {
-      _result.rawTxn = rawTxn;
-    }
-    if (authenticator != null) {
-      _result.authenticator = authenticator;
-    }
-    if (encoded != null) {
-      _result.encoded = encoded;
-    }
-    if (json != null) {
-      _result.json = json;
-    }
-    return _result;
+    final result = create();
+    if (rawTxn != null) result.rawTxn = rawTxn;
+    if (authenticator != null) result.authenticator = authenticator;
+    if (encoded != null) result.encoded = encoded;
+    if (json != null) result.json = json;
+    return result;
   }
-  factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  SigningOutput._();
+
+  factory SigningOutput.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SigningOutput.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SigningOutput', package: const $pb.PackageName(_omitMessageNames ? '' : 'TW.Aptos.Proto'), createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'rawTxn', $pb.PbFieldType.OY)
+    ..aOM<TransactionAuthenticator>(2, _omitFieldNames ? '' : 'authenticator', subBuilder: TransactionAuthenticator.create)
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'encoded', $pb.PbFieldType.OY)
+    ..aOS(4, _omitFieldNames ? '' : 'json')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   SigningOutput clone() => SigningOutput()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
+  @$core.override
   SigningOutput createEmptyInstance() => create();
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
   static SigningOutput? _defaultInstance;
 
+  /// / The raw transaction (bytes)
   @$pb.TagNumber(1)
   $core.List<$core.int> get rawTxn => $_getN(0);
   @$pb.TagNumber(1)
-  set rawTxn($core.List<$core.int> v) { $_setBytes(0, v); }
+  set rawTxn($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRawTxn() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRawTxn() => clearField(1);
+  void clearRawTxn() => $_clearField(1);
 
+  /// / Public key and signature to authenticate
   @$pb.TagNumber(2)
   TransactionAuthenticator get authenticator => $_getN(1);
   @$pb.TagNumber(2)
-  set authenticator(TransactionAuthenticator v) { setField(2, v); }
+  set authenticator(TransactionAuthenticator value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasAuthenticator() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAuthenticator() => clearField(2);
+  void clearAuthenticator() => $_clearField(2);
   @$pb.TagNumber(2)
   TransactionAuthenticator ensureAuthenticator() => $_ensure(1);
 
+  /// / Signed and encoded transaction bytes.
   @$pb.TagNumber(3)
   $core.List<$core.int> get encoded => $_getN(2);
   @$pb.TagNumber(3)
-  set encoded($core.List<$core.int> v) { $_setBytes(2, v); }
+  set encoded($core.List<$core.int> value) => $_setBytes(2, value);
   @$pb.TagNumber(3)
   $core.bool hasEncoded() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEncoded() => clearField(3);
+  void clearEncoded() => $_clearField(3);
 
+  /// Transaction json format for api broadcasting (string)
   @$pb.TagNumber(4)
   $core.String get json => $_getSZ(3);
   @$pb.TagNumber(4)
-  set json($core.String v) { $_setString(3, v); }
+  set json($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
   $core.bool hasJson() => $_has(3);
   @$pb.TagNumber(4)
-  void clearJson() => clearField(4);
+  void clearJson() => $_clearField(4);
 }
 
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
